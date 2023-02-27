@@ -55,7 +55,20 @@ header nav {
     flex-direction: row;
     color:#FFFFFF;
     font-weight: 300;
-
+  }
+  .signup{ 
+    border: none;
+    border-radius: 4px;
+    color:#1E1E1E;
+    background-color:black;
+    border-bottom: 2px solid;
+  }
+  .signin{
+    border: none;
+    border-radius: 4px;
+    color:#1E1E1E;
+    background-color:dimgrey;
+    border-bottom: 2px solid;
   }
   .title{
     width: 205px;
