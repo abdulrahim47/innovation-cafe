@@ -10,6 +10,7 @@ exports.auth_signup_get = (req, res) => {
 // HTTP Sign up Post
 exports.auth_signup_post = async (req, res) => {
     firebase.createUserWithEmailAndPassword(auth,req.body.email, req.body.password).then((userCredentials) => {
+        res.redirect('/home');
         console.log(userCredentials.user);
     }).catch(err => {
         console.log(err);
@@ -18,8 +19,10 @@ exports.auth_signup_post = async (req, res) => {
 
 // HTTP Sign in Get
 exports.auth_signin_get = (req, res) => {
-    console.log('Status: ' + (auth.currentUser ? 'user is signed in' : 'no user is signed in'));
-    res.render('auth/signin');
+    console.log(auth.currentUser);
+    res.render('auth/signin', {
+        user: auth.currentUser
+    });
 }
 
 // HTTP Sign in Post

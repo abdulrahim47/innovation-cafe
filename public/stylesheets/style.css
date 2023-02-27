@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
-*{
-    padding: 0;
+html{
     font-family: 'Tajawal', sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* body {
-    /* margin: 0;
+body {
+    margin: 0;
     padding: 0;
-} */
+    /* background-color: #1E1E1E; */
+}
+
+.body{
+    /* background-color: white */
+}
 
 header {
     width: 100%;
@@ -26,69 +31,91 @@ header nav {
 
 .ctaHeader {
     display: flex;
-    justify-content:center;
-    margin-left: auto; 
+    justify-content: center;
+    margin-left: auto;
     margin-right: 0;
     overflow: hidden;
-  padding: 20px 10px;
+    padding: 20px 10px;
 }
-.ctaHeader a{
+
+.ctaHeader a {
     float: left;
     text-align: center;
     padding: 12px;
     text-decoration: none;
-    font-size: 18px; 
+    font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
     flex-direction: row;
-    color:#FFFFFF;
+    color: #FFFFFF;
     font-weight: 300;
-  }
-  .ctaAuth a{
-    float: left;
+    transition: all 0.3s ease-in-out;
+}
+
+.ctaHeader a:hover{
+    color: goldenrod;
+    transition: all 0.3s ease-in-out;
+}
+
+.ctaAuth{
+    margin-right: 15px;
+}
+
+.ctaAuth a {
     text-align: center;
-    padding: 12px;
+    padding: 10px 30px;
     text-decoration: none;
-    font-size: 18px; 
-    line-height: 25px;
-    border-radius: 4px;
-    flex-direction: row;
-    color:#FFFFFF;
-    font-weight: 300;
-  }
-  .signup{ 
-    border: none;
-    border-radius: 4px;
-    color:#1E1E1E;
-    background-color:black;
-    border-bottom: 2px solid;
-  }
-  .signin{
-    border: none;
-    border-radius: 4px;
-    color:#1E1E1E;
-    background-color:dimgrey;
-    border-bottom: 2px solid;
-  }
-  .title{
-    width: 205px;
-    height: 23px;
-    margin-left: auto;
+    font-size: 18px;
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50px;
+    width: 80px;
+    margin-right: 5px;
+    font-weight:500;
+    transition: all 0.3s ease-in-out;
+}
+
+.signup {
+   background-color: #FFFFFF;
+   color: #1E1E1E !important;
+}
+
+.signup:hover{
+    color: #FFFFFF !important;
+    background-color: #1E1E1E!important;
+    transition: all 0.3s ease-in-out;
+}
+
+.signin:hover {
+    color: #1E1E1E !important;
+    background-color: #FFFFFF !important;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Title Nav Bar */
+
+.titleContainer{
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.title {
     float: right;
     text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 24px; 
-    line-height: 25px;
-    border-radius: 4px;
-    flex-direction: row;
-    color:#FFFFFF;
-  }
-       
-header img{
+    font-size: 24px;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+header img {
     height: 50px;
     width: 50px;
-    margin-left:50px;
 }
 
 /* .ctaHeader {
@@ -96,7 +123,7 @@ header img{
 } */
 
 .homeContainer {
-    height: 100%;
+    height: 700px;
     width: 100%;
     position: relative;
 }
@@ -104,10 +131,9 @@ header img{
 .homeContainer img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 
 }
-
 
 .text {
     display: flex;
@@ -116,12 +142,10 @@ header img{
     justify-content: center;
     gap: 40px;
     width: 50%;
-    height: 50%;
+    /* height: 50%; */
     padding: 20px;
-    background-color:rgba(0, 0, 0, 0.589);
+    background-color: rgba(0, 0, 0, 0.589);
     color: #FFFFFF;
-
-
 }
 
 .textContainer {
@@ -134,7 +158,6 @@ header img{
     align-items: center;
     top: 0;
     left: 0;
-    /* transform: translate(0, -1200px); */
     text-align: center;
 }
 
@@ -147,16 +170,11 @@ header img{
     line-height: 60px;
     letter-spacing: 0.105em;
 }
-.textContainer h3{
-    /* position: absolute; */
-    /* width: 507px;
-    height: 42px;
-    left: 142px;
-    top: 207px; */
+
+.textContainer h3 {
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
-    /* line-height: 42px; */
 }
 
 .cta {
@@ -182,7 +200,6 @@ footer {
     font-weight: 100;
     font-style: normal;
     font-size: 20px;
-    /* line-height: 50px; */
     color: #FFFFFF;
     background-position: center;
     background-size: cover;
@@ -227,6 +244,7 @@ footer {
     border: 1px solid #ccc;
     border-radius: 0.25rem;
 }
+
 .signUpLabel {
     display: block;
     margin-bottom: 0.5rem;
@@ -252,7 +270,7 @@ footer {
 
 .width50 {
     width: 39%;
-    
+
 }
 
 .rightBtn {
@@ -281,10 +299,11 @@ footer {
 }
 
 @keyframes animate {
-    from{
+    from {
         transform: scale(1, 0);
         opacity: 0;
     }
+
     to {
         transform: scale(1, 1);
         opacity: 1;
@@ -297,7 +316,8 @@ footer {
 
 /* Progress Bar */
 
-.progressBar::before, .progress{
+.progressBar::before,
+.progress {
     content: "";
     position: absolute;
     top: 43%;
@@ -335,7 +355,7 @@ footer {
 .progressStep::before {
     counter-increment: step;
     content: counter(step);
-    
+
 }
 
 .progressStep::after {
@@ -354,18 +374,32 @@ footer {
 .progressStepActive::after {
     color: #1e1e1e;
 }
-#ulCss{
-    position: absolute;
-width: 51px;
-height: 20px;
-left: calc(50% );
-top: calc(50%);
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
 
-color: #FFFFFF;
+/* Styling for the SIGN in PAGE*/
+/* Beginning of the CSS Coding */
+
+.signInBtn {
+    width: 100%;
 }
+
+.create {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.forgetPArent {
+    display: grid;
+    place-items: center;
+}
+
+.forget {
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+/* End of the CSS coding for the Sign in */
+
 /* End of the CSS Coding */
