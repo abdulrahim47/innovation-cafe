@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="background-image">
     <div class="menuContainer">
         <div class="itemContainer">
@@ -14,4 +15,23 @@
                 </div>
         </div>
     </div>
+=======
+<div class="itemAdd">
+    <a href="./add">add</a>
+</div>
+<div class="itemContainer">
+    <% items.forEach(function(item){ %>
+        <!-- <div class="itemImg"> -->
+            
+          <!-- </div> -->
+    <div class="items">
+        <img class="menuImage" src="https://live.staticflickr.com/65535/52716853889_0b5893fc5c.jpg" width="280" height="250" alt="Cappuccino_at_Sightglass_Coffee">
+        <!-- <img src="https://live.staticflickr.com/65535/52716075817_f2c18fa8d2.jpg" width="500" height="357" alt="Esspresso"> -->
+        <!-- <img src="https://live.staticflickr.com/65535/52717165559_c7f35484da.jpg" width="500" height="333" alt="wallpaper-blur"> -->
+        <%= item.imageURL %>
+        <a href="/item/show?id=<%= item._id %>"><%= item.title %></a>
+        <%= item.price %> <span>BD</span>
+    </div>
+    <% }) %>
+>>>>>>> 3b979f735ff8b59a9f0136e55c2bd656ee2602fa
 </div>
